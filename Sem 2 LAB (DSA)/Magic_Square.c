@@ -3,44 +3,38 @@
 void generateMagicSquare(int n) {
     int magicSquare[n][n];
 
-    // Initialize all positions as 0
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             magicSquare[i][j] = 0;
         }
     }
 
-    // Start position for 1
     int i = 0, j = n / 2;
 
-    // Place all numbers from 1 to n*n
     for (int num = 1; num <= n * n; ) {
-        if (i < 0 && j == n) { // Condition 4
+        if (i < 0 && j == n) { 
             i = 0;
             j = n - 2;
         } else {
-            // Wrap around rows
+
             if (i < 0) i = n - 1;
 
-            // Wrap around columns
             if (j == n) j = 0;
         }
 
-        if (magicSquare[i][j] != 0) { // Condition 2
+        if (magicSquare[i][j] != 0) { 
             i += 1;
             j -= 2;
             continue;
         } else {
-            // Place the number
+            
             magicSquare[i][j] = num++;
         }
 
-        // Move to the next position
         i--;
         j++;
     }
 
-    // Print the magic square
     printf("The Magic Square for n = %d:\n", n);
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
