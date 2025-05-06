@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>welcome</title>
-    </head>
-    <body>
-        <table>
-            
-        </table>
-    </body>
+<head>
+  <title>HTML Page</title>
+  <script>
+    function abc() {
+      let a = parseFloat(document.getElementById("1").value);
+      let b = parseFloat(document.getElementById("2").value);
+      let c = a + b;
+      document.getElementById("3").value = c;
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label>Input 1st number:</label>
+    <input type="number" id="1"><br>
+    <label>Input 2nd number:</label>
+    <input type="number" id="2"><br>
+    <label>Result:</label>
+    <input type="number" id="3" readonly><br>
+    <button type="button" onclick="abc()">Calculate</button>
+  </form>
+</body>
 </html>
