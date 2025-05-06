@@ -3,10 +3,38 @@
 <head>
   <title>HTML Page</title>
   <script>
-    function abc() {
+    function add() {
       let a = parseFloat(document.getElementById("1").value);
       let b = parseFloat(document.getElementById("2").value);
       let c = a + b;
+      document.getElementById("3").value = c;
+    }
+
+    function sub() {
+      let a = parseFloat(document.getElementById("1").value);
+      let b = parseFloat(document.getElementById("2").value);
+      let c = a - b;
+      document.getElementById("3").value = c;
+    }
+
+    function mul() {
+      let a = parseFloat(document.getElementById("1").value);
+      let b = parseFloat(document.getElementById("2").value);
+      let c = a * b;
+      document.getElementById("3").value = c;
+    }
+
+    function div() {
+      let a = parseFloat(document.getElementById("1").value);
+      let b = parseFloat(document.getElementById("2").value);
+      let c = a / b;
+      document.getElementById("3").value = c;
+    }
+
+    function rem() {
+      let a = parseFloat(document.getElementById("1").value);
+      let b = parseFloat(document.getElementById("2").value);
+      let c = a % b;
       document.getElementById("3").value = c;
     }
   </script>
@@ -19,7 +47,11 @@
     <input type="number" id="2"><br>
     <label>Result:</label>
     <input type="number" id="3" readonly><br>
-    <button type="button" onclick="abc()">Calculate</button>
+    <button type="button" onclick="add()">+</button>
+ <button type="button" onclick="sub()">-</button>
+ <button type="button" onclick="mul()">*</button>
+ <button type="button" onclick="div()">/</button>
+ <button type="button" onclick="rem()">%</button>
   </form>
 </body>
 </html>
