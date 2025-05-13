@@ -67,15 +67,10 @@ int main()
 	s.push(20);
 	s.push(30);
 	cout << s.pop() << " Popped from stack\n";
-	
-	
 	cout << "Top element is : " << s.peek() << endl;
-	
-
 	cout <<"Elements present in stack : ";
 	while(!s.isEmpty())
 	{
-
 		cout << s.peek() <<" ";
 		s.pop();
 	}
